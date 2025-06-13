@@ -5,36 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevFinance$</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/professor.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap"
         rel="stylesheet">
 </head>
-
-<style>
-
-    #subtitulo{
-        display: flex;
-        width: 100%;
-        height: 45px;
-        text-align: right;
-        justify-content: space-between;
-    }
-
-    #subtitulo button{
-        width: 50px;
-        border: none;
-        border-radius: 7px;        
-    }
-
-    #subtitulo button:hover{
-        cursor: pointer;
-        background: #fff;        
-    }
-</style>
 
 <body onload="validaSessao()">
     <header>
@@ -98,27 +76,7 @@
         <p>dev.finance$</p>
     </footer>
 </body>
-<script>
-    function validaSessao() {
-        const token = localStorage.getItem("token");
-        if (token) {
-            // Valida o token
-            if (token == "123456") {
-                //window.location.href = "index.html"
-            } else {
-                alert("Sessão inválida!");
-                window.location.href = "login.html"
-            }
-        } else {
-            alert("Token inválido!");
-            window.location.href = "login.html"
-        }
-    }
 
-    function logout() {
-        localStorage.setItem("token", "");
-        window.location.href = "login.html"
-    }
-</script>
-
+<script src="js/api.js"></script>
+<script src="js/index.js"></script>
 </html>
