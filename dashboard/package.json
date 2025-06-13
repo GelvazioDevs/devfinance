@@ -1,0 +1,17 @@
+{
+  "name": "projeto-verde",
+  "version": "1.0.0",
+  "main": "login.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "-": "^0.0.1",
+    "d": "^1.0.2",
+    "json-server": "^1.0.0-beta.3"
+  }
+}
