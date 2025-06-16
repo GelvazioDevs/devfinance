@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Bancário</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+    }
+    .sidebar {
+      width: 220px;
+      background-color: #003366;
+      color: white;
+      height: 100vh;
+      padding-top: 20px;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    }
+    .sidebar h3 {
+      text-align: center;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+    .sidebar ul li {
+      padding: 15px 20px;
+      cursor: pointer;
+    }
+    .sidebar ul li:hover {
+      background-color: #005599;
+    }
+    .content {
+      flex: 1;
+      padding: 30px;
+    }
+    .section {
+      display: none;
+    }
+    .section.active {
+      display: block;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h3>Banco Interno</h3>
+    <ul>
+      <li onclick="showSection('transferencias')">Transferências</li>
+      <li onclick="showSection('emprestimos')">Empréstimos</li>
+      <li onclick="showSection('aplicacoes')">Aplicações</li>
+      <li onclick="showSection('investimentos')">Investimentos</li>
+      <li onclick="showSection('analiseCredito')">Análise de Crédito</li>
+    </ul>
+  </div>
+  <div class="content">
+    <div id="transferencias" class="section active">
+      <h2>Transferências</h2>
+      <p>Regra: valor mínimo de R$1,00, saldo suficiente, validação da conta de destino.</p>
+      <input type="text" placeholder="Conta destino">
+      <input type="number" placeholder="Valor">
+      <button>Enviar</button>
+    </div>
+    <div id="emprestimos" class="section">
+      <h2>Solicitar Empréstimo</h2>
+      <p>Regra: valor condicionado à renda, parcelas entre 1 e 60.</p>
+      <input type="number" placeholder="Valor desejado">
+      <input type="number" placeholder="Parcelas">
+      <button>Simular</button>
+    </div>
+    <div id="aplicacoes" class="section">
+      <h2>Aplicações</h2>
+      <p>Regra: investimento mínimo, escolha de modalidade (Poupança ou CDI), carência de resgate.</p>
+      <input type="number" placeholder="Valor a aplicar">
+      <select>
+        <option>Poupança</option>
+        <option>CDI</option>
+      </select>
+      <button>Aplicar</button>
+    </div>
+    <div id="investimentos" class="section">
+      <h2>Investimentos</h2>
+      <p>Regra: perfil de risco, tipos de investimentos como Ações ou Fundos Imobiliários, execução D+1.</p>
+      <input type="number" placeholder="Valor a investir">
+      <select>
+        <option>Ações</option>
+        <option>Fundos Imobiliários</option>
+      </select>
+      <button>Investir</button>
+    </div>
+    <div id="analiseCredito" class="section">
+      <h2>Análise de Crédito</h2>
+      <p>Regra: verificação automática de score, dívidas, renda mensal e histórico de pagamentos.</p>
+      <input type="text" placeholder="CPF do cliente">
+      <button>Executar Análise</button>
+    </div>
+  </div>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>

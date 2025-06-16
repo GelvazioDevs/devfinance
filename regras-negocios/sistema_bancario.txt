@@ -1,0 +1,125 @@
+[login e acesso
+Aqui estão **regras de negócios para o processo de login** em um **portal de banco com sistema online**. Essas regras visam garantir **segurança**, **usabilidade** e **conformidade** com normas de segurança digital (como LGPD e normas do Banco Central do Brasil).
+
+---
+
+### 🔐 **Regras de Negócio para Login em um Portal Bancário**
+
+---
+
+#### 1. **Credenciais Obrigatórias**
+
+* O login exige obrigatoriamente:
+
+  * **CPF ou número da conta** (formato validado).
+  * **Senha pessoal** (mínimo de 8 caracteres, com letras e números).
+* Pode ser permitido login com **biometria** (caso haja app ou dispositivo compatível).
+
+---
+
+#### 2. **Validação de Formato e Existência**
+
+* O sistema deve:
+
+  * Validar o **formato do CPF** ou conta.
+  * Verificar a **existência do usuário** no banco de dados.
+
+---
+
+#### 3. **Autenticação de Múltiplos Fatores (MFA)**
+
+* Em caso de login por navegador ou dispositivo novo:
+
+  * Enviar código via **SMS, e-mail** ou **token de aplicativo autenticador**.
+* MFA obrigatório para movimentações de valores após login.
+
+---
+
+#### 4. **Tentativas Inválidas**
+
+* Após **5 tentativas erradas consecutivas**, a conta:
+
+  * Deve ser **bloqueada temporariamente** por 30 minutos.
+  * Pode ser **desbloqueada** via canal de atendimento com verificação de identidade.
+  * Notificação automática enviada ao e-mail ou celular cadastrado.
+
+---
+
+#### 5. **Sessão e Tempo de Inatividade**
+
+* Sessões devem expirar após **15 minutos de inatividade**.
+* Exibir alerta antes do encerramento automático.
+
+---
+
+#### 6. **Dispositivos Confiáveis**
+
+* O usuário pode **marcar o dispositivo como confiável** para evitar MFA por 30 dias.
+* Essa opção deve ser revogável a qualquer momento.
+
+---
+
+#### 7. **Privacidade e Proteção de Dados**
+
+* Nenhum dado sensível deve ser exposto no front-end.
+* Dados de login não devem ser armazenados em cache ou cookies inseguros.
+* Cumprimento da **LGPD (Lei Geral de Proteção de Dados)**.
+
+---
+
+#### 8. **Logs e Monitoramento**
+
+* Todas as tentativas de login devem ser:
+
+  * **Registradas** com IP, horário e dispositivo.
+  * **Monitoradas por padrões de comportamento anormais** (fraude ou invasão).
+  * Notificações enviadas ao usuário em caso de login de local incomum.
+
+---
+
+#### 9. **Recuperação de Acesso**
+
+* Função “**Esqueci minha senha**” deve:
+
+  * Solicitar CPF e canal de verificação (SMS, e-mail).
+  * Gerar token de uso único com validade de 10 minutos.
+  * Forçar nova senha e autenticação ao concluir.
+
+---
+
+#### 10. **Política de Senha**
+
+* Troca de senha obrigatória a cada **90 dias**.
+* Nova senha **não pode ser igual às últimas 3** utilizadas.
+* Senha deve conter:
+
+  * Pelo menos 1 letra maiúscula
+  * 1 letra minúscula
+  * 1 número
+  * 1 caractere especial (ex: @, #, \$)
+
+---
+
+#### 11. **Acessibilidade e Inclusão**
+
+* O portal deve ser acessível conforme padrões WCAG.
+* Compatibilidade com leitores de tela e navegação via teclado.
+
+---
+
+### Extras (opcional, mas recomendável):
+
+#### ✅ Login com biometria via app
+
+* Usar biometria facial ou digital para autenticar via aplicativo oficial.
+* Criptografia de ponta a ponta.
+
+#### 🔒 Captcha inteligente
+
+* Uso de reCAPTCHA para evitar bots, mas com detecção invisível para não impactar usuários reais.
+
+---
+
+Se quiser, posso complementar com **fluxograma de autenticação**, **casos de uso** ou **exemplos de código (backend ou frontend)**. Deseja isso?
+
+[transacoes online

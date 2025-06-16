@@ -1,0 +1,59 @@
+Aqui está uma **lista clara de regras de negócio específicas para a análise de crédito para um empréstimo bancário**, que você pode aplicar tanto conceitualmente quanto como lógica adicional na sua API:
+
+---
+
+### 🧠 **Regras de Negócio para Análise de Crédito (Empréstimo)**
+
+#### ✅ **Critérios Básicos**
+
+1. **Idade mínima**: 18 anos.
+2. **Idade máxima para concessão sem avalista**: 70 anos.
+3. **Renda mínima exigida**: R\$ 1.320 (salário mínimo atual).
+4. **Tempo mínimo de emprego formal**: 6 meses.
+
+---
+
+#### 💸 **Regras de Capacidade de Pagamento**
+
+5. **Comprometimento máximo da renda**: 35% (renda líquida).
+6. **Parcelas maiores que 48 vezes** exigem renda ≥ R\$ 5.000.
+7. **Cliente com outro empréstimo ativo**:
+
+   * Redução de 30% no limite aprovado.
+8. **Clientes com mais de 50% da renda já comprometida**: **crédito negado**.
+
+---
+
+#### 🧾 **Regras de Histórico e Perfil**
+
+9. **Investimentos ativos superiores a R\$ 20.000**: bônus de 10% no limite.
+10. **Cliente com financiamento de imóvel ativo**:
+
+    * Redução de 15% no limite.
+11. **Cliente com histórico de inadimplência nos últimos 2 anos**: crédito negado.
+12. **Cliente com score interno baixo (< 400)**: crédito negado ou exigência de garantia.
+
+---
+
+#### 🧪 **Risco e Mitigações**
+
+13. **Sexo feminino com filhos declarados**: bônus de estabilidade (R\$500 no limite).
+14. **Jovens entre 18 e 25 anos**:
+
+    * Limite reduzido em 20% ou exigência de fiador.
+15. **Idade entre 26-59 e dívidas < R\$3.000**:
+
+    * Aumento de 15% no limite aprovado.
+
+---
+
+#### 🎲 **Regras Aleatórias para Simulação de Risco Interno**
+
+16. Aplicar variação aleatória de risco entre **-5% a +5%** no limite final (simula avaliação por IA ou algoritmo interno).
+17. Possível exigência de garantia para valores acima de R\$30.000.
+
+---
+
+### 🔁 Próximo passo:
+
+Deseja que eu implemente **essas regras** dentro da sua **função atual `calcularLimiteCredito()`** da API? Posso aplicar um novo modo para análise de **empréstimo**, separado da análise genérica de crédito. Deseja isso?
