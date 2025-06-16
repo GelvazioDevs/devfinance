@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Visualização de Cobrança Pix</title>
+    <style>
+        #popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: 700px;
+            overflow-y: auto;
+            background-color: #f9f9f9;
+            border: 2px solid #ccc;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            padding: 20px;
+            border-radius: 10px;
+            font-family: Arial, sans-serif;
+            z-index: 9999;
+        }
+        #popup h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        #popup p {
+            margin: 5px 0;
+        }
+        #popup .close-btn {
+            display: block;
+            text-align: right;
+            margin-bottom: 10px;
+        }
+        #popup .close-btn button {
+            background-color: #d9534f;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #popup .section-title {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #555;
+        }
+        #popup ul {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<script>
+    const jsonData = {
+        "calendario": {
+            "criacao": "2025-06-02T11:38:00.125-03:00",
+            "apresentacao": "2025-06-16T11:29:30.027-03:00",
+            "dataDeVencimento": "2025-06-20",
+            "validadeAposVencimento": 0
+        },
+        "txid": "e7605b6022db49f7b257915174f2df6d",
+        "devedor": {
+            "cnpj": "09077620000101",
+            "nome": "TIDAS CREDIARIO LTDA"
+        },
+        "recebedor": {
+            "logradouro": "SBS QUADRA 4 LT 3/4",
+            "cidade": "Brasilia",
+            "uf": "DF",
+            "cep": "70092900",
+            "cnpj": "00360305000104",
+            "nome": "CAIXA ECONOMICA FEDERAL",
+            "nomeFantasia": "CAIXA ECONOMICA FEDERAL"
+        },
+        "revisao": 0,
+        "status": "ATIVA",
+        "valor": {
+            "original": "18042.11",
+            "final": "18042.11"
+        },
+        "chave": "c75e4ec6-9881-4240-a2f3-3672b7fe56c1",
+        "infoAdicionais": [
+            { "nome": "IDENTIFICADOR GFD", "valor": "0125060273019749-0" },
+            { "nome": "TAG", "valor": "09077620 05/2025 MENSAL" },
+            { "nome": "totalConsignado", "valor": "554.01" }
+        ]
+    };
+
+    function criarPopup(dados) {
+        const popup = document.createElement('div');
+        popup.id = 'popup';
+
+        popup.innerHTML = `
+            <div class="close-btn"><button onclick="document.body.removeChild(this.parentElement.parentElement)">Fechar</button></div>
+            <h2>Dados da Cobrança Pix</h2>
+            <div><span class="section-title">Status:</span> ${dados.status}</div>
+            <div><span class="section-title">Valor Original:</span> R$ ${dados.valor.original}</div>
+            <div><span class="section-title">Valor Final:</span> R$ ${dados.valor.final}</div>
+            <div><span class="section-title">Data de Vencimento:</span> ${dados.calendario.dataDeVencimento}</div>
+            <div><span class="section-title">TXID:</span> ${dados.txid}</div>
+            
+            <div class="section-title">Devedor:</div>
+            <ul>
+                <li><b>Nome:</b> ${dados.devedor.nome}</li>
+                <li><b>CNPJ:</b> ${dados.devedor.cnpj}</li>
+            </ul>
+
+            <div class="section-title">Recebedor:</div>
+            <ul>
+                <li><b>Nome:</b> ${dados.recebedor.nome}</li>
+                <li><b>CNPJ:</b> ${dados.recebedor.cnpj}</li>
+                <li><b>Endereço:</b> ${dados.recebedor.logradouro}, ${dados.recebedor.cidade} - ${dados.recebedor.uf}, CEP: ${dados.recebedor.cep}</li>
+            </ul>
+
+            <div class="section-title">Informações Adicionais:</div>
+            <ul>
+                ${dados.infoAdicionais.map(info => `<li><b>${info.nome}:</b> ${info.valor}</li>`).join('')}
+            </ul>
+
+            <div><span class="section-title">Chave Pix:</span> ${dados.chave}</div>
+        `;
+
+        document.body.appendChild(popup);
+    }
+
+    // Abrir o popup ao carregar a página
+    window.onload = function() {
+        criarPopup(jsonData);
+    };
+</script>
+
+</body>
+</html>

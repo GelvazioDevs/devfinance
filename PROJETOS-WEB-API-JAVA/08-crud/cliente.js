@@ -29,7 +29,7 @@ const readClient = () => getLocalStorage()
 
 const createClient = (client) => {
     const dbClient = getLocalStorage()
-    dbClient.push (client)
+    dbClient.push(client)
     setLocalStorage(dbClient)
 }
 
@@ -126,20 +126,24 @@ const editDelete = (event) => {
     }
 }
 
-updateTable()
+function loadAcoesCliente() {
+    
+    updateTable();
 
-// Eventos
-document.getElementById('cadastrarCliente')
-    .addEventListener('click', openModal)
+    // Eventos
+    document.getElementById('cadastrarCliente')
+        .addEventListener('click', openModal)
 
-document.getElementById('modalClose')
-    .addEventListener('click', closeModal)
+    document.getElementById('modalClose')
+        .addEventListener('click', closeModal)
 
-document.getElementById('salvar')
-    .addEventListener('click', saveClient)
+    document.getElementById('salvar')
+        .addEventListener('click', saveClient)
 
-document.querySelector('#tableClient>tbody')
-    .addEventListener('click', editDelete)
+    document.querySelector('#tableClient>tbody')
+        .addEventListener('click', editDelete)
 
-document.getElementById('cancelar')
-    .addEventListener('click', closeModal)
+    document.getElementById('cancelar')
+        .addEventListener('click', closeModal)
+}
+
