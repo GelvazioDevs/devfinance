@@ -1,0 +1,500 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Montserrat', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*------------------------------------------------------------SEÇÃO_CABEÇALHO------------------------------------------------------------*/
+
+header{
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 30px 5%;
+    background: linear-gradient(90deg, #351f1f, #5f4c4c)
+}
+
+header h1{
+    font-size: 19pt;
+    font-weight: normal;
+    color: #fff;
+    cursor: default;
+    user-select: none;
+}
+
+.links-navbar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.links-navbar a:active{
+    color: inherit
+}
+
+.links-navbar, .links-navbar a{
+    list-style: none;
+    font-size: 11pt;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: #fff;
+    transition: all 0.3s ease 0s;
+    position: relative;
+    user-select: none;
+}
+
+.links-navbar a:hover{
+    color: #ffcdd7;
+}
+
+.links-navbar a::before{
+    content: " ";
+    position: absolute;
+    bottom: -5px;
+    right: 50%;
+    width: 0;
+    height: 2px;
+    transition: 0.3s;
+    background-color: #ffaabb;
+}
+
+.links-navbar a:hover::before{
+    width: 50%;
+}
+
+.links-navbar a::after{
+    content: " ";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    transition: 0.3s;
+    background-color: #ffaabb;
+}
+
+.links-navbar a:hover::after{
+    width: 50%;
+}
+
+
+/*------------------------------------------------------------SEÇÃO_BANNERS------------------------------------------------------------*/
+
+
+.banner1 h1{
+    color: #fff;
+    font-size: 63pt;
+    font-family: 'Fraunces', serif;
+    font-weight: normal;
+    text-align: center;
+    user-select: none;
+}
+
+.banner1{
+    background-image: url("imgs/jovem-comendo-croissants-em-um-cafe.jpg");
+    background-position-y: center;
+}
+
+.banner2{
+    background-image: url("imgs/parallax-imagem4.jpg");
+}
+
+.banner3{
+    background-image: url("imgs/parallax-imagem3.jpg");
+}
+
+.banner4{
+    background-image: url("imgs/parallax-imagem2.jpg");
+}
+
+.parallax-capa{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.parallax-secoes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 50vh;
+}
+
+.parallax-secoes h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Fraunces', serif;
+    font-size: 20pt;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 3px;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #4b2604;
+    border-radius: 7px;
+    border: 2px solid #422203;
+}
+
+.informacoes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    text-align: center;
+    background-color: #412424;
+    border-top: 2px solid #130a0a;
+    border-bottom: 2px solid #130a0a;
+}
+
+.informacoes div{
+    max-width: 1024px;
+    line-height: 26pt;
+    color: #ffffff;
+    font-size: 12pt;
+    margin: 10px;
+}
+
+.informacoes h2{
+    font-size: 23pt;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 3px;
+    color: #eec89a;
+    padding: 10px;
+}
+
+
+/*------------------------------------------------------------SEÇÃO_ENDEREÇO------------------------------------------------------------*/
+
+
+.endereco{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 70vh;
+    text-align: center;
+    background-color: #fff;
+}
+
+.endereco div{
+    max-width: calc(600px - 10px);
+    width: 100%;
+    padding: 10px;
+}
+
+.endereco h3{
+    font-size: 20pt;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    letter-spacing: 3px;
+    padding: 8px 18px;
+    color: #fff;
+    background-color: #4b2604;
+    border-radius: 7px;
+    border: 2px solid #422203;
+}
+
+.endereco iframe{
+    max-width: 600px;
+    width: 100%;
+    height: 300px;
+    border: none;
+    box-shadow: 0px 0px 8px #242424;
+}
+
+/*------------------------------------------------------------SEÇÃO_HORARIOS------------------------------------------------------------*/
+
+
+#horario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    text-align: center;
+    background-color: #412424;
+    border-top: 2px solid #130a0a;
+    border-bottom: 2px solid #130a0a;  
+}
+
+#horario h2{
+    font-size: 30pt;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 3px;
+    color: #ffffff;
+    padding: 10px;
+}
+
+.horarios{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('imgs/cafeteria.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 80vh;
+}
+
+.container-lista{
+    max-width: 1024px;
+    width: 100%;
+}
+
+.lista-horarios{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px
+}
+
+.lista-horarios li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.lista-horarios li p{
+    color: #fff;
+    text-shadow: 2px 2px 2px #000;
+    width: 190px;
+    font-weight: bold;
+    font-size: 20pt;
+}
+
+.lista-horarios li h3{
+    width: 160px;
+    text-align: right;
+    color: #fff;
+    text-shadow: 2px 2px 2px #000;
+    font-size: 20pt;
+}
+
+.lista-horarios li div{
+    height: 2px;
+    flex: 1 1 auto;
+    box-shadow: 2px 2px 2px #000;
+    background-color: #fff;
+
+}
+
+
+/*------------------------------------------------------------SEÇÃO_CONTATOS------------------------------------------------------------*/
+
+
+.barra-cor h1{
+    color: #fff;
+    font-size: 30pt;
+}
+
+.contatos{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 400px;
+}
+
+.contatos a{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 12pt;
+}
+
+.card-contato{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    min-height: 200px;
+}
+
+.card-contato span{
+    font-weight: bold;
+    font-size: 15pt;
+    color: #52170d;
+}
+
+.card-contato h3{
+    font-size: 12pt;
+    margin: 0px;
+    padding: 0px;
+}
+
+.card-contato img{
+    max-width: 45px;
+}
+
+
+/*------------------------------------------------------------SEÇÃO_RODAPÉ------------------------------------------------------------*/
+
+
+.rodape{
+    position: relative;
+    background-color: #412424;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+}
+
+.rodape span{
+    font-weight: bold;
+}
+
+.rodape p{
+    color: #fff;
+}
+
+
+/*------------------------------------------------------------MEDIA_QUERY------------------------------------------------------------*/
+
+
+@media screen and (max-width: 700px){
+
+    header{
+        padding: 20px;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header h1{
+        margin-bottom: 20px;
+    }
+
+
+    .banner1{
+        background-position-x: 20%;
+    }
+
+    .banner1 h1{
+        font-size: 45pt;
+    }
+
+    .lista-horarios li p, .lista-horarios li h3{
+        font-size: 13pt;
+    }
+
+    .lista-horarios li p{
+        width: 150px;
+    }
+    
+    .lista-horarios li h3{
+        width: 110px;
+    }
+
+    .contatos a{
+        font-size: 10pt;
+    }
+
+    #horario-titulo{
+        min-height: 300px;
+    }
+
+    .contatos{
+        flex-direction: column;
+    }
+
+    .card-contato{
+        align-items: center;
+    }
+
+    .card-contato h3, .card-contato p{
+        font-size: 10pt;
+    }
+
+    .card-contato img{
+        max-width: 35px;
+    }
+
+}
+
+@media screen and (max-width: 490px) {
+    
+    #horario-titulo h2{
+        font-size: 25pt;
+    }
+
+    .horarios{
+        height: 70vh;
+    }
+
+    .lista-horarios li p, .lista-horarios li h3{
+        font-size: 13pt;
+    }
+
+    .lista-horarios li p{
+        width: 150px;
+    }
+    
+    .lista-horarios li h3{
+        width: 110px;
+    }
+
+    .banner1{
+        background-position-x: 20%;
+    }
+
+    .banner1 h1{
+        font-size: 30pt;
+    }
+
+    header{
+        padding: 30px 0;
+    }
+
+    header h1{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 320px){
+
+    .banner1{
+        background-position-x: -250px;
+    }
+
+    .barra-cor{
+        min-height: 300px;
+        height: 100%;
+    }
+
+    .barra-cor h1{
+        font-size: 22pt;
+    }
+
+    .horarios{
+        height: 70vh;
+    }
+
+    .lista-horarios{
+        gap: 40px;
+    }
+}

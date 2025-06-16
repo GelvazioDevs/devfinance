@@ -1,0 +1,64 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static '/styles/all.css' %}">
+<link rel="stylesheet" href="{% static '/styles/despesa.css' %}">
+<link rel="stylesheet" href="{% static '/styles/table.css' %}">
+
+{% block content %}
+    <div class="container">
+        <div class="titulo-pagina">Autenticações</div>
+        <div class="btn-acao">
+            <button class="button-add btn-add-despesa">Adicionar</button>
+        </div>
+        {% if github_response %}
+            <div>DADOS RETORNO GITHUB</div>
+            <div>login:{{ login }}</div>
+        {% else %}
+            <div>SEM DADOS RETORNO GITHUB</div>
+        {% endif %}
+
+        <div class="cards">
+            <div class="card">
+                <div class="descricao-valor">
+                    <div class="descricao">
+                        Despesas pendentes<span class="apontador">></span>
+                    </div>
+                    <div class="valor">
+                        R$ 1.047,46
+                    </div>
+                </div>
+                <div class="icone cor-icone-despesa">
+                    <i class="fa-solid fa-arrow-up"></i>
+                </div>
+            </div>
+            <div class="card">
+                <div class="descricao-valor">
+                    <div class="descricao">
+                        Despesas recebidas<span class="apontador">></span>
+                    </div>
+                    <div class="valor">
+                        R$ 1.047,46
+                    </div>
+                </div>
+                <div class="icone cor-icone-despesa">
+                    <i class="fa-solid fa-arrow-down"></i>
+                </div>
+            </div>
+            <div class="card ">
+                <div class="descricao-valor">
+                    <div class="descricao">
+                        Total<span class="apontador">></span>
+                    </div>
+                    <div class="valor">
+                        R$ 1.047,46
+                    </div>
+                </div>
+                <div class="icone cor-icone-despesa">
+                    <i class="fa-solid fa-scale-balanced"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(255, 166, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:30px;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.container h1 {
+    color: aliceblue;
+    text-align: center;
+}
+
+.container form {
+    display: flex;
+    gap:25px;
+    height: 100%;
+}
+#nome, #endereco{
+    width: 100%;        
+}
+
+.titulo {
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+.formulario {
+    background-color: orangered;
+    border: 1px solid orangered;
+    padding: 25px;
+    border-radius: 5px; 
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.dados-formulario {
+    padding: 5px;
+    width: 100%;
+}
+
+.dados-formulario-button {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dados-formulario input, .dados-formulario button {
+    padding: 10px 5px;
+    padding-bottom: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;                
+}
+
+.dados-formulario button {
+    padding: 15px;
+    width: 180px;
+    transition: all .4s ease-in-out;
+}
+
+.dados-formulario button:hover {
+    cursor: pointer;
+    background-color:  rgb(255, 166, 0);
+    color: aliceblue;
+}
+
+.rodape {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    background-color: orangered;
+    color: aliceblue;
+    padding: 10px;
+    font-size: 10px;
+}
+
+.vermelho {
+    background-color: red;
+}

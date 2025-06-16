@@ -1,0 +1,35 @@
+{% load static %}
+<div class="menu">
+    <span>
+        mobills - clone
+    </span>
+    <a href="{% url 'dashboard' %}">
+        <div class="icone cor-icone-saldo">
+            <i class="fa-solid fa-house"></i>
+        </div>
+        <span>
+            Dashboard
+        </span>
+    </a>
+    <a href="{% url 'receitas' %}">
+        <div class="icone cor-icone-receita">
+            <i class="fa-solid fa-arrow-up"></i>
+        </div>
+        <span>Receitas</span>
+    </a>
+    <a href="{% url 'despesas' %}">
+        <div class="icone cor-icone-despesa">
+            <i class="fa-solid fa-arrow-down"></i>
+        </div>
+        <span>Despesas</span>
+    </a>
+    <a href="#">
+        <div class="icone cor-icone-cartao">
+            <i class="fa-regular fa-credit-card"></i>
+        </div>
+        <span>
+{#            <a href="{% url 'cartaocredito' %}">Cartões de crédito</a>#}
+            Cartões de crédito
+        </span>
+    </a>
+</div>

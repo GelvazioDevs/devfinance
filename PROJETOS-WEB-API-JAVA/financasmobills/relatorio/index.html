@@ -1,0 +1,39 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <div class="titulo-pagina">Relatorios</div>
+    <div class="balanco">
+        <div class="balanco-descricao">
+            <span class="valores-dashboard">
+                <span class="icone cor-icone-receita">
+                    <i class="fa-solid fa-arrow-up"></i>
+                </span>
+                <span>
+                    Receitas
+                </span>
+            </span>
+            <span id="valor-receita" class="valor-receita">R$ 2.160,89</span>
+        </div>
+        <div class="balanco-descricao">
+            <span class="valores-dashboard">
+                <span class="icone cor-icone-despesa">
+                    <i class="fa-solid fa-arrow-down"></i>
+                </span>
+                <span>Despesas</span>
+            </span>
+            <span id="valor-despesa">R$ 1.160,89</span>
+        </div>
+        <hr>
+        <div class="balanco-descricao">
+            <span class="valores-dashboard">
+                <span class="icone cor-icone-saldo">
+                    <i style="font-size: 23px;" class="fa-solid fa-scale-balanced" title="Dashboard"></i>
+                </span>
+                <span>Balanço</span>
+            </span>
+            <span id="valor-balanco">R$ 1.000,00</span>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,21 @@
+.color-red {
+    background-color: rgb(239, 83, 80);
+    color: white;
+}
+
+.color-red:hover {
+    background-color: rgba(239, 83, 80, 0.8);
+    color: black;
+}
+
+.green {
+    background-color: #00c853;
+}
+
+.red {
+    background-color: rgba(239, 83, 80, 0.8);;
+}
+
+.blue {
+    background-color: #4ac1f7;
+}

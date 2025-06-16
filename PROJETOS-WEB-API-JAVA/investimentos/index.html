@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Controle de Investimentos</title>
+    
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/loading.css">
+
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Icone -->
+    <link rel="icon" type="image/jpg" sizes="16x16" href="images/favicon.jpg">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">    
+</head>
+<script src="js/login.js" defer async></script>
+<body onload="validaSessao('index.html')">
+    <div class="box-load">
+        <div class="pre"></div>
+        <div class="mensagem-loading">Carregando página, aguarde....</div>
+    </div>
+    <div class="content">
+        <div class="sidebar">
+            <div class="logo-details">
+                <!-- <i class='bx bxl-c-plus-plus'></i> -->
+                <i class='bx bx-analyse'></i>
+                <span class="logo_name">
+                    <img src="images/logo.jpg" alt="Controle de Investimentos">
+                </span>
+            </div>
+            <ul class="nav-links" id="menu"></ul>
+        </div>
+        
+        <section class="home-section">
+            <nav>
+                <div class="sidebar-button">
+                    <i class='bx bx-menu sidebarBtn'></i>
+                    <span class="dashboard">Principal</span>
+                </div>
+                <div class="profile-details">
+                    <img src="images/profile.png" alt="">
+                    <span class="admin_name">Plataforma de Controle de Investimentos</span>
+                    <i class='bx bx-chevron-down'></i>
+                </div>
+            </nav>
+
+            <div class="home-content" id="home-content">
+                <!-- <div class="overview-boxes" style="display: flex; justify-content: center;align-items: center;width: 100%;"> -->
+                <div class="overview-boxes" style="display: none; justify-content: center;align-items: center;width: 100%;">
+                    <div class="box" style="width: 100%;background-color: aqua;">
+                        <div class="right-side">
+                            <div class="box-topic">Fonte de Renda 01</div>
+                            <div class="box-topic">Tipo:Salário</div>
+                            <div class="box-topic">Período:mensal</div>
+                            <div class="number">R$ 4300,00</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="overview-boxes" style="display: none;">
+                    <div class="box">
+                        <div class="right-side">
+                            <div class="box-topic">Faturamento Bruto</div>
+                            <div class="number">R$ 8925,80</div>
+                            <div class="indicator">
+                                <i class='bx bx-up-arrow-alt'></i>
+                                <span class="text">Atualizado em 07/09/2023</span>
+                            </div>
+                        </div>
+                        <i class='bx bx-cart-alt cart'></i>
+                    </div>
+                    <div class="box">
+                        <div class="right-side">
+                            <div class="box-topic">Despesas</div>
+                            <div class="number">R$ 4276,00</div>
+                            <div class="indicator">
+                                <i class='bx bx-down-arrow-alt down'></i>
+                                <span class="text">Atualizado em 07/09/2023</span>
+                            </div>
+                        </div>
+                        <i class='bx bxs-cart-download cart four'></i>
+                        <!-- <i class='bx bxs-cart-add cart two'></i> -->
+                    </div>
+                    <div class="box">
+                        <div class="right-side">
+                            <div class="box-topic">Lucro Líquido</div>
+                            <div class="number">R$ 4749,00</div>
+                            <div class="indicator">
+                                <i class='bx bx-down-arrow-alt down'></i>
+                                <span class="text">Atualizado em 07/09/2023</span>
+                            </div>
+                        </div>
+                        <i class='bx bxs-cart-add cart two'></i>
+                    </div>
+                </div>
+                
+                <div class="sales-boxes" style="display: block;">
+                    <div class="recent-sales box">
+                        <div class="title">Renda Por mês(2023)</div>
+                        <div class="sales-details">
+                            <ul class="details">
+                                <li class="topic">Outubro/2023</li>
+                                <hr>
+                                <li><a href="#">Salário Programador Mensal</a></li>
+                                <li><a href="#">Cursos Hotmart - Lógica Programação</a></li>                                
+                                <li><a href="#">Cursos Hotmart - HTML</a></li>                                
+                                <li><a href="#">Cursos Hotmart - CSS</a></li>                                
+                                <li><a href="#">Cursos Hotmart - JavaScript - ES6</a></li>                                
+                                <li><a href="#">Cursos Hotmart - JavaScript - NodeJs</a></li>                                
+                                <li><a href="#">Cursos Hotmart - JavaScript - ReactJs</a></li>                                                                
+                                <li><a href="#">Cursos Hotmart - Java - Básico</a></li>                               
+                                <li><a href="#">Cursos Hotmart - Java - Intermediário</a></li>                               
+                                <li><a href="#">Cursos Hotmart - Java - Avançado</a></li>                               
+                                <li><a href="#">Cursos Hotmart - Java - Pleno(Banco de Dados)</a></li>                               
+                                <li><a href="#">Cursos Hotmart - Java - Master(API RESTFULL)</a></li>                               
+                                <li><a href="#">Cursos Hotmart - PHP - Básico</a></li>                                
+                                <li><a href="#">Cursos Hotmart - PHP - Intermediário</a></li>                                
+                                <li><a href="#">Cursos Hotmart - PHP - Avançado</a></li>                                
+                                <li><a href="#">Cursos Hotmart - Python - Básico</a></li>                                
+                                <li><a href="#">Cursos Hotmart - Python - Intermediário</a></li>                                
+                                <li><a href="#">Cursos Hotmart - Python - Avançado</a></li>                                
+                                <li><a href="#">Cursos Hotmart - Python - Django Framework</a></li>                                
+                                <li><a href="#">Cursos Hotmart - Python - FrameworkRestfull</a></li>                                
+                                <li><a href="#">Cursos Hotmart - Blockchain</a></li>                                                                
+                                <li><a href="#">Cursos Hotmart - App Finanças</a></li>                                
+                            </ul>
+                            <ul class="details">
+                                <li class="topic">Valor(R$)</li>
+                                <hr>
+                                <li><a href="#">R$ 4300,00</a></li>
+                                <li><a href="#">R$ 89,00</a></li>
+                                <li><a href="#">R$ 0,00</a></li>
+                                <li><a href="#">R$ 0,00</a></li>
+                                <li><a href="#">R$ 0,00</a></li>
+                                <li><a href="#">R$ 0,00</a></li>
+                                <li><a href="#">R$ 0,00</a></li>
+                                <li><a href="#">R$ 0,00</a></li>
+                                <li><a href="#">R$ 0,00</a></li>
+                                <li><a href="#">R$ 0,00</a></li>
+                                <li><a href="#">R$ 0,00</a></li>
+                                <li><a href="#">R$ 0,00</a></li>
+                                <li><a href="#">R$ 0,00</a></li>
+                                <li><a href="#">R$ 0,00</a></li>
+                                <li><a href="#">R$ 0,00</a></li>
+                                <li><a href="#">R$ 0,00</a></li>
+                                <li><a href="#">R$ 0,00</a></li>
+                                <li><a href="#">R$ 0,00</a></li>
+                                <li><a href="#">R$ 0,00</a></li>
+                                <li><a href="#">R$ 0,00</a></li>
+                                <li><a href="#">R$ 0,00</a></li>
+                                <li><a href="#">R$ 0,00</a></li>
+                            </ul>
+                            <ul class="details">
+                                <li class="topic"> 
+                                    <div class="button">
+                                        <a href="#">Total: R$ 1234,00</a>
+                                    </div>
+                                </li>
+                                <hr>                                
+                                <li><a href="#">R$ 0,00</a></li>
+                                <li><a href="#">R$ 0,00</a></li>
+                                <li><a href="#">R$ 0,00</a></li>
+                                <li><a href="#">R$ 0,00</a></li>
+                                <li><a href="#">R$ 0,00</a></li>
+                                <li><a href="#">R$ 0,00</a></li>
+                                <li><a href="#">R$ 0,00</a></li>
+                                <li><a href="#">R$ 0,00</a></li>
+                                <li><a href="#">R$ 0,00</a></li>
+                                <li><a href="#">R$ 0,00</a></li>
+                                <li><a href="#">R$ 0,00</a></li>
+                                <li><a href="#">R$ 0,00</a></li>
+                                <li><a href="#">R$ 0,00</a></li>
+                                <li><a href="#">R$ 0,00</a></li>
+                                <li><a href="#">R$ 0,00</a></li>
+                                <li><a href="#">R$ 0,00</a></li>
+                                <li><a href="#">R$ 0,00</a></li>
+                                <li><a href="#">R$ 0,00</a></li>
+                                <li><a href="#">R$ 0,00</a></li>
+                                <li><a href="#">R$ 0,00</a></li>
+                                <li><a href="#">R$ 0,00</a></li>
+                                <li><a href="#">R$ 0,00</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>    
+</body>
+</html>

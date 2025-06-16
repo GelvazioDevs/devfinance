@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Controle de Investimentos</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/loading.css">
+    <link rel="stylesheet" href="css/accordion.css">
+
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Icone -->
+    <link rel="icon" type="image/jpg" sizes="16x16" href="images/favicon.jpg">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Modal -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Javascript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js" defer async></script>
+<script src="js/global.js" defer async></script>
+<script src="js/login.js" defer async></script>
+<script src="js/receita.js" defer async></script>
+
+<body onload="loadingReceitas()">
+    <div class="box-load">
+        <div class="pre"></div>
+        <div class="mensagem-loading">Carregando página, aguarde....</div>
+    </div>
+
+    <div class="content">
+        <div class="sidebar">
+            <div class="logo-details">
+                <i class='bx bx-analyse'></i>
+                <span class="logo_name">
+                    <img src="images/logo.jpg" alt="Admin">
+                </span>
+            </div>
+            <ul class="nav-links" id="menu"></ul>
+        </div>
+        <section class="home-section">
+            <nav>
+                <div class="sidebar-button">
+                    <i class='bx bx-menu sidebarBtn'></i>
+                    <span class="dashboard">Receitas</span>
+                </div>
+                <div class="profile-details">
+                    <img src="images/profile.png" alt="">
+                    <span class="admin_name">Controle de Investimentos</span>
+                    <i class='bx bx-chevron-down'></i>
+                </div>
+            </nav>
+
+            <div class="home-content">
+                <div class="sales-boxes" style="display: block;">
+                    <div class="accordion" id="accordionPanelsStayOpen">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-accordion-01">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-accordion-01" aria-expanded="true"
+                                    aria-controls="panelsStayOpen-accordion-01">
+                                    <h4>Rendendo hoje!</h4>
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-accordion-01" class="accordion-collapse collapse show"
+                                aria-labelledby="panelsStayOpenaccordion-01">
+                                <div class="accordion-body">
+
+                                    <div class="recent-sales box" id="tabela-despesas"
+                                        style="display: block;width: 95%;margin-top: 10px; flex-direction: column; justify-content: center; align-items: center;">
+                                        <div id="titulo-tabela-despesas" class="title">Fonte Renda 01</div>
+                                    </div>
+                                    
+                                    <div class="recent-sales box" id="tabela-despesas"
+                                        style="display: block;width: 95%;margin-top: 10px; flex-direction: column; justify-content: center; align-items: center;">
+                                        <div id="titulo-tabela-despesas" class="title">Fonte Renda 02</div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-accordion-02">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-accordion-02" aria-expanded="true"
+                                    aria-controls="panelsStayOpen-accordion-02">
+                                    <h4>Em Análise</h4>
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-accordion-02" class="accordion-collapse collapse show"
+                                aria-labelledby="panelsStayOpen-accordion-02">
+                                <div class="accordion-body">
+                                    <div class="recent-sales box" id="tabela-despesas"
+                                        style="display: block;width: 95%;margin-top: 10px; flex-direction: column; justify-content: center; align-items: center;">
+                                        <div id="titulo-tabela-despesas" class="title">Fonte Renda 03</div>
+                                    </div>
+                                    
+                                    <div class="recent-sales box" id="tabela-despesas"
+                                        style="display: block;width: 95%;margin-top: 10px; flex-direction: column; justify-content: center; align-items: center;">
+                                        <div id="titulo-tabela-despesas" class="title">Fonte Renda 04</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-accordion-03">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-accordion-03" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-accordion-03">
+                                    <h4>Em Andamento</h4>
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-accordion-03" class="accordion-collapse collapse"
+                                aria-labelledby="panelsStayOpen-accordion-03">
+                                <div class="accordion-body">
+                                    <div class="recent-sales box" id="tabela-despesas"
+                                        style="display: block;width: 95%;margin-top: 10px; flex-direction: column; justify-content: center; align-items: center;">
+                                        <div id="titulo-tabela-despesas" class="title">Fonte Renda 05</div>
+                                    </div>
+                                    
+                                    <div class="recent-sales box" id="tabela-despesas"
+                                        style="display: block;width: 95%;margin-top: 10px; flex-direction: column; justify-content: center; align-items: center;">
+                                        <div id="titulo-tabela-despesas" class="title">Fonte Renda 06</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-accordion-04">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-accordion-04" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-accordion-04">
+                                    <h4>Pendente Implementação</h4>
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-accordion-04" class="accordion-collapse collapse"
+                                aria-labelledby="panelsStayOpen-accordion-04">
+                                <div class="accordion-body">
+                                    <div class="recent-sales box" id="tabela-despesas"
+                                        style="display: block;width: 95%;margin-top: 10px; flex-direction: column; justify-content: center; align-items: center;">
+                                        <div id="titulo-tabela-despesas" class="title">Fonte Renda 07</div>
+                                    </div>
+                                    
+                                    <div class="recent-sales box" id="tabela-despesas"
+                                        style="display: block;width: 95%;margin-top: 10px; flex-direction: column; justify-content: center; align-items: center;">
+                                        <div id="titulo-tabela-despesas" class="title">Fonte Renda 08</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

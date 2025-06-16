@@ -1,0 +1,22 @@
+https://fly.io/
+
+usa postgresql
+
+SENHA DO FLY:Y.#np7e2dbk@jCg
+
+token criado:
+fo1_dlxEL0qxC40uHj7fXGJqEUxrqZEl8k_kXINtGRP33Ok
+
+
+comando para executar o flyctl 
+ C:\Users\gelvazio\.fly\bin\flyctl.exe [COMANDO]
+ 
+ lancar aplicativo novo
+ 
+ C:\Users\gelvazio\.fly\bin\flyctl.exe launch --now
+ 
+ Alocar um novo ip
+
+ atualizar o app atual 
+ fly deploy 
+ 

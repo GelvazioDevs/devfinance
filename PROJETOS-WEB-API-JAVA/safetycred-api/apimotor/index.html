@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Planos de Pagamento</title>
+
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/checkbox.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app">
+      <header class="header">
+        <div class="container">
+          <h1>Planos de Pagamento
+            <span class="date-time" id="datahora"></span>
+            <span class="credit-limit" id="credit-limit"></span>
+          </h1>
+        </div>
+      </header>
+      
+      <main class="container">
+         <section class="plan-filters">
+           <div class="search-filter" id="rotaApiInput">
+            <br>
+            <label for="rota">API Key:</label>
+            <input type="password" id="apiKey" value="123456">
+            
+            <label for="rota">Rota API:</label>
+            <input type="text" id="rotaAPI" value="http://localhost:8888/api/api.php/motor"
+              placeholder="http://localhost:8888/api/api.php/{rota}">
+            <br>
+            <br>
+            <label for="clicpf">Cliente CPF:</label>
+            <input type="text" id="clicpf" value="158.962.000-30" placeholder="CPF do cliente" style="width: 145px;">
+            
+            <label for="valorfinanciado">Valor Financiado:</label>
+            <input type="text" id="valorfinanciado" value="250" placeholder="Valor financiado" style="width: 125px;">
+            
+            <label for="primeiroVencimento">1º Vencto:</label>
+            <input type="text" id="primeiroVencimento" value="2025-05-24" placeholder="Primeiro vencimento" style="width: 110px;">
+
+            <button class="btn bt-primary" id="btnCallApiMotor" style="width: 90px;">Call API</button>
+            <hr>
+            <div class="checkbox-wrapper-6" id="simulacaoPropostaCheck">
+              <label class="tgl-btn" for="simulacaoProposta2">Simulação Proposta:</label>
+              <input class="tgl tgl-light" type="checkbox" id="simulacaoProposta">
+              <label class="tgl-btn" for="simulacaoProposta">
+            </div>
+          </div>
+         </section>
+
+        <section class="plan-filters" style="display: none;">
+          <div class="search-filter">
+            <input type="text" id="search-input" placeholder="Buscar planos...">
+          </div>
+          <div class="sort-options">
+            <select id="sort-select">
+              <option value="default">Ordenar por</option>
+              <option value="parcelas-asc">Parcelas (menor para maior)</option>
+              <option value="parcelas-desc">Parcelas (maior para menor)</option>
+              <option value="valor-asc">Valor (menor para maior)</option>
+              <option value="valor-desc">Valor (maior para menor)</option>
+            </select>
+          </div>
+        </section>
+
+        <section class="plans-container" id="plans-container"></section>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <p>&copy; 2025 Sistema de Planos de Pagamento</p>
+        </div>
+      </footer>
+    </div>
+
+    <template id="plan-card-template">
+      <div class="plan-card">
+        <div class="plan-header">
+          <h3 class="plan-title"></h3>
+          <div class="credit-score"></div>
+        </div>
+        <div class="plan-details">
+          <div class="detail-item">
+            <span class="label">Entrada:</span>
+            <span class="value entrada"></span>
+          </div>
+          <div class="detail-item">
+            <span class="label">Valor financiado:</span>
+            <span class="value financiado"></span>
+          </div>
+          <div class="detail-item">
+            <span class="label">Valor parcela:</span>
+            <span class="value parcela"></span>
+          </div>
+          <div class="detail-item">
+            <span class="label">Parcelas:</span>
+            <span class="value parcelas"></span>
+          </div>
+          <div class="detail-item">
+            <span class="label">Primeiro vencimento:</span>
+            <span class="value vencimento"></span>
+          </div>
+        </div>
+        <div class="installments-preview">
+          <button class="toggle-installments">Ver parcelas</button>
+          <div class="installments-list hidden"></div>
+        </div>
+      </div>
+    </template>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,146 @@
+.s-faq {
+  background-color: $white-normal;
+
+  .container {
+    max-width: $container-xl;
+    margin: 0 auto;
+    padding: $gap-96 $gap-32;
+
+    @include responsive(l) {
+      padding: $gap-72 $gap-32;
+    }
+
+    > span {
+      text-align: center;
+
+      h2 {
+        color: $black-normal;
+        margin: $gap-16 $gap-0;
+        font-size: 4.8rem;
+        font-weight: 500;
+
+        @include responsive(m) {
+          font-size: 3.2rem;
+        }
+      }
+
+      p {
+        color: $black-normal;
+        font-size: 2.4rem;
+
+        @include responsive(m) {
+          font-size: 1.8rem;
+        }
+      }
+    }
+
+    .faq-option {
+      width: 70%;
+      margin: $gap-72 auto 0px auto;
+
+      @include responsive(l) {
+        width: 100%;
+        margin: $gap-40 auto 0px auto;
+      }
+
+      > div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: $gap-32 $gap-0;
+        min-height: 175px;
+
+        @include responsive(l) {
+          min-height: 125px;
+        }
+
+       
+
+        article {
+          width: 100%;
+          cursor: pointer;
+
+          &:hover .icon-faq {
+            width: 70px;
+          }
+
+          &:hover .accordion-img {
+            width: 40px;
+          }
+
+          .accordion {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            margin: $gap-16 $gap-0;
+
+            div {
+              display: flex;
+              align-items: center;
+            }
+          }
+
+          .active {
+            .container-img {
+              transform: rotateX(180deg);
+            }
+
+            .icon-faq {
+              width: 70px;
+            }
+          }
+
+          .accordion-img {
+            transition: width 0.5s;
+            width: 32px;
+          }
+
+          .panel {
+            padding: $gap-24 $gap-16;
+            display: none;
+            overflow: hidden;
+
+            p {
+              line-height: 160%;
+              color: $black-normal;
+              font-size: 1.8rem;
+            }
+          }
+        }
+
+        .icon-faq {
+          margin: $gap-0 $gap-16;
+          padding: $gap-16;
+          border-radius: $gap-8;
+          transition: width 0.4s;
+          width: 64px;
+          background-color: $primary-opacity;
+
+          @include responsive(l) {
+            display: none;
+          }
+        }
+
+        &:nth-child(2) {
+          border-top: 1px solid #ffe9ec;
+          border-bottom: 1px solid #ffe9ec;
+        }
+
+        span {
+          margin-left: $gap-8;
+
+          @include responsive(l) {
+            margin-left: $gap-0;
+          }
+
+          h4 {
+            color: $black-normal;
+            font-weight: 500;
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+}

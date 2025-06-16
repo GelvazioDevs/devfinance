@@ -1,0 +1,179 @@
+{% extends 'partials/base.html' %} {% load static %} {% block content %}
+<div class="container">
+    <div class="titulo-pagina">Receitas</div>
+    <div class="btn-acao">
+        <button class="button-add" onclick="openModal()">Adicionar</button>
+    </div>
+    <div class="cards">
+        <div class="card">
+            <div class="descricao-valor">
+                <div class="descricao">
+                    Receitas pendentes<span class="apontador">></span>
+                </div>
+                <div class="valor">
+                    R$ 1.047,46
+                </div>
+            </div>
+            <div class="icone cor-icone-receita">
+                <i class="fa-solid fa-arrow-up"></i>
+            </div>
+        </div>
+        <div class="card">
+            <div class="descricao-valor">
+                <div class="descricao">
+                    Receitas recebidas<span class="apontador">></span>
+                </div>
+                <div class="valor">
+                    R$ 1.047,46
+                </div>
+            </div>
+            <div class="icone cor-icone-receita">
+                <i class="fa-solid fa-arrow-down"></i>
+            </div>
+        </div>
+        <div class="card ">
+            <div class="descricao-valor">
+                <div class="descricao">
+                    Total<span class="apontador">></span>
+                </div>
+                <div class="valor">
+                    R$ 1.047,46
+                </div>
+            </div>
+            <div class="icone cor-icone-receita">
+                <i class="fa-solid fa-scale-balanced"></i>
+            </div>
+        </div>
+    </div>
+    <div class="dados-tabela">
+        <hr>
+        <table>
+            <tr>
+                <td>Situação</td>
+                <td>Data</td>
+                <td>Descrição</td>
+                <td>Categoria</td>
+                <td>Conta</td>
+                <td>Valor</td>
+                <td>Ações</td>
+            </tr>
+            <tbody>
+                <tr>
+                    <td align="center"><span class="icone cor-icone-receita-despesa checked"><i class="fa-solid fa-check"></i></span></td>
+                    <td>04/05/2023</td>
+                    <td>PAGAMENTO AGUA</td>
+                    <td>Investimento</td>
+                    <td>Carteira</td>
+                    <td>R$ 60,00</td>
+                    <td class="acoes">
+                        <button class="button-edit" title="Editar"><i class="fa-solid fa-pencil"></i></button>
+                        <button class="button-delete" title="Excluir"><i class="fa-regular fa-trash-can"></i></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center"><span class="icone cor-icone-receita-despesa checked"><i class="fa-solid fa-check"></i></span></td>
+                    <td>04/05/2023</td>
+                    <td>PAGAMENTO AGUA</td>
+                    <td>Investimento</td>
+                    <td>Carteira</td>
+                    <td>R$ 60,00</td>
+                    <td class="acoes">
+                        <button class="button-edit" title="Editar"><i class="fa-solid fa-pencil"></i></button>
+                        <button class="button-delete" title="Excluir"><i class="fa-regular fa-trash-can"></i></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center"><span class="icone cor-icone-receita-despesa checked"><i class="fa-solid fa-check"></i></span></td>
+                    <td>04/05/2023</td>
+                    <td>PAGAMENTO AGUA</td>
+                    <td>Investimento</td>
+                    <td>Carteira</td>
+                    <td>R$ 60,00</td>
+                    <td class="acoes">
+                        <button class="button-edit" title="Editar"><i class="fa-solid fa-pencil"></i></button>
+                        <button class="button-delete" title="Excluir"><i class="fa-regular fa-trash-can"></i></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <hr>
+    </div>
+
+    <div class="modal">
+        <span class="modal-backdrop close-modal" onclick="closeModal()"></span>
+        <div class="modal-content" style="display: block;">
+            <div class="modal-header">
+                <h2 class="modal-title">Adicionar Receita - 1</h2><button class="close-modal" onclick="closeModal()">&times</button>
+            </div>
+            <div class="modal-body">
+                <form action="{% url 'cadastroreceita' %}" method="POST" class="formulario" id="formularioReceita">
+                    {% csrf_token %}
+                    <div class="formulario-coluna">
+                        <div class="dados-formulario flex-column">
+                            <div class="wrapper">
+                                <label for="valor">Valor:</label>
+                                <input type="text" id="valor" placeholder="Informe o valor...">
+                            </div>
+
+                            <div class="wrapper">
+                                <label for="data">Data:</label>
+                                <input type="date" id="data">
+                            </div>
+                            <div class="wrapper wrap">
+                                <label for="switchA1" class="switch-item">
+                                    <span class="label">Recebida?</span>
+                                    <input type="checkbox" name="" id="situacao" class="control" checked>
+                                </label>
+                            </div>
+                            <div class="wrapper wrap">
+                                <label for="switchA1" class="switch-item">
+                                    <span class="label">
+                                        <i class="fa-solid fa-rotate-right"></i>Repetir?</span>
+                                    <input type="checkbox" name="" id="repetir" class="control" checked>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="dados-formulario flex-column">
+
+                            <div class="wrapper">
+                                <label for="descricao">Descrição:</label>
+                                <input type="text" id="descricao" placeholder="Informe a descrição...">
+                            </div>
+                            <div class="wrapper">
+                                <label for="observacao">Observação:</label>
+                                <input type="text" id="observacao" placeholder="Informe a observação...">
+                            </div>
+                            <div class="wrapper wrap">
+                                <label for="switchA1" class="switch-item checkbox-cadastro">
+                                    <span class="label">
+                                        <i class="fa-solid fa-thumbtack"></i>
+                                        Fixa?</span>
+                                    <input type="checkbox" name="" id="fixa" class="control" checked>
+                                </label>
+                            </div>
+                            <div class="wrapper flex-row-periodo">
+                                <div class="wrapper-field">
+                                    <label for="vezes" class="flex-row-periodo-label">vezes</label>
+                                    <input type="number" id="vezes" class="flex-row-periodo-input">
+                                </div>
+                                <div class="wrapper-field">
+                                    <select name="periodo" id="periodo" class="flex-row-periodo-select">
+                                        <option value="3">Meses</option>
+                                        <option value="4">Anos</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="wrapper modal-footer flex-center gap-10">
+                        <button class="button-add" onclick="confirmar()">Confirmar</button>
+                        <button class="button-add color-red" onclick="closeModal()">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

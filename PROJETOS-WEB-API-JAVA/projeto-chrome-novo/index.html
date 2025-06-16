@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        margin-top: 125px;
+    }
+</style>
+<body>
+    
+
+<button class="btn btn-primary" command="show-modal" commandfor="my-dialog">
+    Teste Modal
+</button>
+
+<dialog id="my-dialog" class="modal-dialog-2" closedby="any">
+    <div class="modal-content">
+        <section class="modal-header">
+            <h1 class="modal-title">Clientes</h1>
+                <button class="btn btn-danger" command="close" commandfor="my-dialog">
+                    <span class="btn-close-modal">&times;</span>
+                </button>
+                </section>
+                <hr>
+            <div class="form">
+                <div class="campo">
+                    <label for="codigo">Código:</label>
+                    <input disabled id="codigo" size="20" type="text" value="1">
+                    </div>
+                    <div class="campo">
+                    <label for="codigo">Nome:</label>
+                    <input disabled id="codigo" size="40" type="text" value="Gelvazio Camargo">
+                    </div>
+                    <div class="campo">
+                    <label for="codigo">Endereço:</label>
+                    <input disabled id="codigo" size="40" type="text" value="Rio do Sul/SC">
+                    </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-success" 
+                command="close" 
+                commandfor="my-dialog" onclick="alert('confirmando...')">
+                    Confirmar
+                </button>
+            </div>
+        </div>
+    </dialog>
+
+
+</body>
+</html>

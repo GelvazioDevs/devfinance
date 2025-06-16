@@ -1,0 +1,39 @@
+
+.header{
+    background-color: #2C2C2E;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.header h1 {
+    text-align: center;
+}
+
+.header .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap:1px;
+}
+
+.header .menu a {
+    text-decoration: none;
+    font-size: 18px;
+    color:rgb(255, 255, 255);
+
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 30px;
+    transition: all .4s ease-in-out;
+    width: 100%;
+    padding: 20px;
+}
+
+.header .menu a:hover {
+    background-color: #151516;
+    cursor: pointer;
+}

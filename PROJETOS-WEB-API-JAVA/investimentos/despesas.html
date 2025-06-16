@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Controle de Investimentos</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/loading.css">
+
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Icone -->
+    <link rel="icon" type="image/jpg" sizes="16x16" href="images/favicon.jpg">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Modal -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Javascript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<style>
+    .center {
+        display: flex;
+        justify-content: center;
+    }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js" defer async></script>
+<script src="js/global.js" defer async></script>
+<script src="js/login.js" defer async></script>
+<script src="js/despesas.js" defer async></script>
+
+<body onload="validaSessao('despesas.html')">
+    <div class="box-load">
+        <div class="pre"></div>
+        <div class="mensagem-loading">Carregando página, aguarde....</div>
+    </div>
+
+    <div class="content">
+        <div class="sidebar">
+            <div class="logo-details">
+                <i class='bx bx-analyse'></i>
+                <span class="logo_name">
+                    <img src="images/logo.jpg" alt="Admin">
+                </span>
+            </div>
+            <ul class="nav-links" id="menu"></ul>            
+        </div>
+        <section class="home-section">
+            <nav>
+                <div class="sidebar-button">
+                    <i class='bx bx-menu sidebarBtn'></i>
+                    <span class="dashboard">Despesas</span>
+                </div>
+                <div class="profile-details">
+                    <img src="images/profile.png" alt="">
+                    <span class="admin_name">Controle de Investimentos</span>
+                    <i class='bx bx-chevron-down'></i>
+                </div>
+            </nav>
+
+            <div class="home-content">
+                <div class="sales-boxes" style="display: block;">
+                    <div class="recent-sales box" style="width: 95%;margin-top: 10px; display: flex;justify-content: space-between;">
+                        <div class="sales-details">
+                            <div class="title">
+                                <div class="button">
+                                    <a href="#" style="padding:15px;">Total Gasto:<span
+                                            id="total_gasto">R$ 0,00</span></a>
+                                    <input type="hidden" id="input_total_gasto">                                            
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sales-details" style="padding-left: 15px;">
+                            <div class="title">
+                                <div class="button">
+                                    <input type="hidden" value="4749" id="saldo_atual_festa">
+                                    <a href="#" style="padding:15px;">Saldo Atual: <span id="saldo_atual">R$ 0,00</span>
+                                    </a>
+                                    <input type="hidden" id="input_saldo_atual">                                            
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <input type="hidden" id="mes_selecionado" value="0">
+
+                    <div class="recent-sales box" id="lista-despesa-1-semestre" 
+                        style="width: 95%;margin-top: 10px; display: flex; justify-content: space-between;flex-wrap: wrap;">                        
+                    </div>
+
+                    <div class="recent-sales box" id="lista-despesa-2-semestre" 
+                        style="width: 95%;margin-top: 10px; display: flex;justify-content: space-between;flex-wrap: wrap;">                        
+                    </div>                    
+
+                    <h1>Teste - Accordion</h1>
+                    <div class="accordion" id="accordionPanelsStayOpenExample">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                              Accordion Item #1 - 2023
+                            </button>
+                          </h2>
+                          <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                            <div class="accordion-body">
+                                <div class="recent-sales box" id="tabela-despesas" style="display: block;width: 95%;margin-top: 10px; flex-direction: column; justify-content: center; align-items: center;">
+                                    <div id="titulo-tabela-despesas" class="title">Documentação - Cartório e Contabilidade</div>
+                                    <div id="tabela-despesas-por-mes" class="sales-details" style="width: 95%;margin-top: 10px; display: flex;justify-content: space-between;">
+                                        <table class="container-table" style="color:black;" border="1">
+                                            <thead>
+                                                <tr>
+                                                    <th align="center" style="padding: 5px;">Responsavel</th>
+                                                    <th align="center" style="padding: 5px;">Motivo</th>
+                                                    <th align="center" style="padding: 5px;">Local</th>
+                                                    <th align="center" style="padding: 5px;">Data</th>
+                                                    <th align="center" style="padding: 5px;">Serviço</th>
+                                                    <th align="center" style="padding: 5px;">Custo</th>
+                                                    <th align="center" style="padding: 5px;">Qtde</th>
+                                                    <th align="center" style="padding: 5px;">Subtotal</th>
+                                                    <th align="center" style="padding: 5px;">Comprovante</th>
+                                                    <th align="center" style="padding: 5px;">Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="containerTable-body">
+                                                <!--PREENCHIDO ATRAVES DE JAVASCRIPT!!!-->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                              Accordion Item #2
+                            </button>
+                          </h2>
+                          <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                            <div class="accordion-body">
+                              <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                              Accordion Item #3
+                            </button>
+                          </h2>
+                          <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                            <div class="accordion-body">
+                              <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>            
+        </section>
+    </div>
+</body>
+
+</html>

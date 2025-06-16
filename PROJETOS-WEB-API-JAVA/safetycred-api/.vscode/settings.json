@@ -1,0 +1,7 @@
+{
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4,
+    "Prettier-SQL.tabSizeOverride": 4,
+    "Prettier-SQL.ignoreTabSettings": true,
+    "editor.formatOnSaveMode": "modifications",
+}

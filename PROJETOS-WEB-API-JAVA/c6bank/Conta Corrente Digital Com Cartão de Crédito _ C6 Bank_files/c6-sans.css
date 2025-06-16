@@ -1,0 +1,48 @@
+/* C6 Sans Text */
+@font-face {
+  font-family: 'C6 Sans Text';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(c6sans-text-regular.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'C6 Sans Text';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(c6sans-text-semibold.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'C6 Sans Text';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(c6sans-text-bold.woff2) format('woff2');
+}
+/* C6 Sans Display */
+@font-face {
+  font-family: 'C6 Sans Display';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(c6sans-display-light.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'C6 Sans Display';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(c6sans-display-regular.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'C6 Sans Display';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(c6sans-display-semibold.woff2) format('woff2');
+}

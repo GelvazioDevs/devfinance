@@ -1,0 +1,88 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;        
+}
+
+body {
+    /* background-color: rgb(44, 44, 46); */
+    /* background-color: rgba(16, 16, 17, 0.709); */
+    margin: 0;
+    background-color: rgb(28,28,30);
+    /*background-color: #121212;*/
+    color:rgb(255, 255, 255);    
+    display: flex;
+    /*grid-template-columns: 2fr 10fr;*/
+    justify-content: flex-start;
+}
+
+.titulo-pagina {
+    margin-top: 5px;
+    color: aliceblue;
+    font-size: 30px;
+    margin-left: 25px;
+    margin-bottom: 10px;
+    text-align: left;
+    width: 100%;
+}
+
+.cards {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap:5px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #2C2C2E;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    min-width: 300px;
+    height: 100px;  
+    border-radius: 20px;      
+}
+
+.descricao-valor {
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.descricao-valor .valor {
+    font-size: 25px;
+}
+
+.icone {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cor-icone-saldo {
+    background-color: rgb(66, 165, 245);
+}
+
+.cor-icone-receita {
+    background-color: rgb(102, 187, 106);
+}
+
+.cor-icone-despesa {
+    background-color: rgb(239, 83, 80);
+}
+
+.cor-icone-cartao {
+    background-color: rgb(38, 166, 154);
+}
+
+.icone i {
+    font-size: 25px;
+    color: aliceblue;
+}
+

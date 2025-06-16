@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>&#128512;::Trimania Cap</title>
+</head>
+<style>
+    body {
+        background-color: rgb(255, 166, 0);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:30px;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .giro {
+        background-color: orangered;
+        width: 120px;
+        text-align: center;
+        border-radius: 10px;
+        padding: 5px 15px;
+    }
+
+    .countGiro {
+        color: aliceblue;
+        font-size: 0.7em;
+    }
+
+    .ganhador {
+        background-color: orangered;
+        width: 100%;
+        border: 1px solid orangered;
+        border-radius: 10px;
+        padding: 15px;
+        padding-bottom: 20px;
+    }
+
+    .ganhador h1 {
+        color: aliceblue;
+        text-align: center;
+    }
+    
+    .ganhador form {
+        display: flex;
+        gap:25px;
+        height: 100%;
+    }
+
+    .formulario-ganhador {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap:15px;
+    }
+
+    .rodape {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .rodape span {
+        margin-top: 50px;
+        background-color: orangered;
+        color:aliceblue;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    #nome {
+        width: 97%;        
+    }
+
+    .titulo {
+        background-color: aliceblue;
+        border-radius: 10px;
+    }
+
+    .dados-ganhador {
+        padding: 5px;
+    }
+
+    .dados-ganhador input {
+        padding: 10px 5px;
+        padding-bottom: 15px;
+        font-weight: bold;
+        border: none;
+        border-radius: 10px;                
+    }
+
+    #endereco {
+        width: 97%;
+    }
+
+    .coluna-titulo {
+        border-radius: 5px;
+        border: 1px solid gray;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .coluna-titulo-2 {
+        border-radius: 5px;
+        border: 1px solid gray;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .coluna-titulo-2 .numeros {
+        padding-right: 15px;
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .coluna-titulo .numeros span {
+        height: 55px;
+        border: 1px solid gray;
+    }
+
+    .dados-titulo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
+        gap:25px;
+    }
+
+    .nome-titulo {
+        background-color: black;
+        color: aliceblue;
+        padding: 15px;     
+        border-radius: 5px;
+        border-top-right-radius: 0;   
+        border-end-end-radius: 0;  
+        width: 100px;
+    }
+
+    .btn-edicao button {
+        background-color: green;
+        border-radius: 5px;
+        border: none;
+        padding: 10px 50px;
+        color: aliceblue;
+    }
+
+    .btn-edicao  .app {
+        background-color: blue;
+    }
+
+    .numeros-dezena-sorteada {
+        display: flex;
+    }
+
+    .numeros-dezena-sorteada span {
+        border: 1px solid gray;
+        height: 100%;
+        padding: 15px;        
+    }
+
+    .numero-titulo {
+        width: 100%;
+        display: flex;
+        justify-content: center;        
+        gap:15px;
+        font-size: 2em;
+    }
+
+</style>
+<body>
+    <div class="menu">
+        <h1 class="logo">
+            <img src="logo.png" alt="" height="150px;">
+        </h1>
+        <h1 class="giro"><span class="countGiro">Giro:28</span></h1>
+        <div class="ganhador">
+            <h1>GANHADOR</h1>
+            <form action="">
+                <div class="formulario-ganhador">
+                    <div class="dados-ganhador">
+                        <input id="nome" type="text" value="NOME:JESSICA MORATELLI">
+                    </div>
+                    <div class="dados-ganhador">
+                        <input type="text" value="CPF:**********">
+                        <input type="text" value="TELEFONE:**********">
+                    </div>                    
+                    <div class="dados-ganhador">
+                        <input id="endereco" type="text" value="ENDERECO:ESTRADA SAO JOSE, 540">
+                    </div>                    
+                    <div class="dados-ganhador">
+                        <input type="text" value="BAIRRO:SANTANA">
+                        <input type="text" value="CIDADE:RIO DO SUL">                    
+                    </div>
+                </div>
+                <div class="titulo">
+                    <div class="dados-titulo">
+                        <span class="coluna-titulo">
+                            <span class="nome-titulo">TITULO</span>
+                            <span class="numero-titulo">271549</span>
+                        </span>
+                        <div class="coluna-titulo-2">
+                            <span class="nome-titulo">DEZENAS</span>                           
+                            <span class="numero-titulo">
+                                <span>12</span> 
+                                <span>22</span> 
+                                <span>55</span>                                
+                            </span>
+                        </div>                        
+                        <div class="btn-edicao">
+                            <button class="edicao">QUA - 182ª EDICAO</button>
+                            <button class="app">APP</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="rodape">
+        <span class="instituicao">INSTITUIÇÃO BENEFICIADA</span>
+        <span class="premio">PRÊMIO - 182ª EDIÇÃO</span>
+        <span class="titulo-emitido">TITULO EMITIDO POR</span>
+    </div>
+</body>
+</html>

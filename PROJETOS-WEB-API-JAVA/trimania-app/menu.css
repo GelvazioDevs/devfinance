@@ -1,0 +1,55 @@
+.menu {
+    background-color: orangered;
+    width: 100%;
+}
+
+.menu ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;    
+}
+
+.menu ul li {
+    list-style: none;
+    color: aliceblue;
+    font-weight: bold;
+    padding: 10px;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+    width:160px;    
+}
+
+.menu ul li a {
+    text-decoration: none;
+    font-size: 1.5em;
+    color: aliceblue;
+}
+
+.menu ul li:hover {
+    background-color: rgb(255, 166, 0);
+}
+
+/* Mostra cada menu em seu local */
+.menu li{
+    position:relative;
+    float:left;
+    border-right:1px solid #c0c0c0;
+}
+
+/* esconde o menu */
+.menu li ul {
+    position: absolute;
+    display: none;
+    top:48px;
+    left:0;
+    transition: all .4s ease-in-out;
+}
+
+/* mostra o menu */
+.menu li:hover ul, 
+.menu li.over ul {
+    display:block;
+    width:160px;
+    background-color: orangered;
+}
+

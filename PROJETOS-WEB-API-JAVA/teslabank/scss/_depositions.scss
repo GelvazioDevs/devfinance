@@ -1,0 +1,65 @@
+.s-depositions {
+  background-color: $white-normal;
+
+  .container {
+    max-width: $container-xl;
+    margin: 0 auto;
+    padding: $gap-96 0;
+
+    @include responsive(l) {
+      padding: $gap-72 $gap-24;
+    }
+
+    h2 {
+      color: $black-normal;
+      line-height: 130%;
+      font-size: 4.8rem;
+      font-weight: 500;
+
+      span {
+        font-weight: 400;
+      }
+
+      @include responsive(s) {
+        font-size: 3.2rem;
+      }
+    }
+
+    .depositions-people {
+      margin-top: $gap-96;
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+
+      @include responsive(l) {
+        flex-wrap: wrap;
+        gap: $gap-64;
+      }
+
+      div {
+        width: 30%;
+
+        @include responsive(l) {
+          width: 100%;
+        }
+
+        h4 {
+          transition: border 0.2s;
+          border-left: 3px solid $primary-normal;
+          text-transform: uppercase;
+          color: $black-normal;
+          font-weight: 500;
+          padding-left: $gap-16;
+          font-size: 2.4rem;
+        }
+
+        p {
+          margin-top: $gap-24;
+          line-height: 160%;
+          color: $black-normal;
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+}

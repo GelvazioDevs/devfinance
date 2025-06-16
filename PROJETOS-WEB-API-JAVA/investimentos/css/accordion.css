@@ -1,0 +1,12 @@
+/* Cor de fundo dentro do accordion */
+.show {
+    /* background-color: red; */
+}
+
+.accordion-button .collapsed {
+    background-color: aquamarine;
+}
+
+.accordionn-header {
+    background-color: aquamarine;
+}

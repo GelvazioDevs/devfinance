@@ -1,0 +1,51 @@
+.card-dashboard {
+    width: 100%;
+}
+
+.balanco {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #2C2C2E;
+    border-radius: 25px;
+    height: 300px;
+    width: 100%;
+
+    margin-top: 50px;
+    margin-left: 25px;
+    margin-right: 25px;
+
+    padding: 35px;
+    gap:15px;
+
+    font-size: 20px;    
+}
+
+.balanco-descricao {
+    display: flex;
+    justify-content: space-between;
+    font-size: 25px;
+}
+
+#valor-receita {
+    display: flex;
+    align-items: center;
+    gap:5px;
+    color: rgb(80, 144, 239);
+}
+
+#valor-despesa {
+    color: rgb(239, 83, 80);
+}
+
+.apontador {
+    font-size: 16px;
+    padding: 5px;
+    color: rgba(240, 248, 255, 0.312);
+}
+
+.valores-dashboard {
+    display: flex;
+    align-items: center;
+    gap:15px;
+}
